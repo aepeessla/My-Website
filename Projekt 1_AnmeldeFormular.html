@@ -37,8 +37,12 @@
         width: 100%;
         font-family: "Menlo";
     }
-
-    
+    table, th, td{
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: left;
+        padding-left: 4px;
+    }
     </style>
 </head>
 
@@ -119,11 +123,6 @@
         <label for="Ok-2-post-no">No, I don't agree.</label><br>
     </div>
 
-    <div style="margin-top: 40px;">
-        <button type="submit" style="padding: 10px 20px; font-size: 18px; cursor: pointer;">Send Commission Request!</button>
-    </div>
-
-    </form>
 
         <div>
             <h1>What kind of Commission do u want ?</h1>
@@ -272,19 +271,104 @@
                     name="reference_images" 
                     accept=".jpg, .jpeg, .png" 
                     multiple 
-                    onchange="checkBildAnzahl(this)"
                 >
-                
-                <p>What is your character doing ? What is their facial expression ? Is there a certain pose you want them to be in ? Give me as much example as u can !!!</p>
+
+                <hr>
+
+                <h1>Please discribe your Commission</h1>
+                <label for="Commission descirption">What is your character doing ? What is their facial expression ? Is there a certain pose you want them to be in ? Give me as much example as u can !!!</label>
+                <textarea
+                    id="Commission descirption"
+                    rows="5"
+                    maxlength="500"
+                    placeholder="Please type here..."
+                ></textarea>
+
             </div>
+        </div>
+
+        <div>
+
+            <div>
+                <h1>Do you want your drawing printed ?</h1>
+                <label for="prints-yes">Yes</label>
+                <input name="prints" id="print-yes" type="Radio" value="1"><br>
+
+                <label for="prints-no">No</label>
+                <input name="prints" id="print-no" type="Radio" value="2">
+            </div>
+
+            <h2>These will be added to your final commission prize !</h2>
+            <table style="width: 100%">
+                <tr style="background: rgb(191, 204, 211)">
+                    <th>Size Group</th>
+                    <th>Size</th>
+                    <th>Select</th>
+                </tr>
+                <tr>
+                    <td>Small</td>
+
+
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>8,9cm x 8,9cm = 1,57€</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>12,7cm x 12,7cm = 1,64€</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Large</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>20cm x 20cm = 5,95€ (S)</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>30cm x 30cm = 8,45€ (S)</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>50cm x 50cm = 14,45 (S)</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>20cm x 30cm = 7,65€ (R)</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>30cm x 45cm = 10,65 (R)</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>50cm x 75cm = 16,65 (R)</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Polaroid</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>7,5cm x10cm = 0,50€</td>
+                    <td><input type="checkbox" ></td>
+                </tr>
+                </table>
 
 
         </div>
-        
     
-    </form>
-
-
+    <div style="margin-top: 40px;">
+        <button type="submit" style="padding: 10px 20px; font-size: 18px; cursor: pointer;">Send Commission Request!</button>
+    </div>
 
     </form>
 </body>
