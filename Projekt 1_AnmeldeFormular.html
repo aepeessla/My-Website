@@ -21,11 +21,22 @@
     }
     h2{
         text-decoration: underline;
+        line-height: 1.3;
     }
 
     .specialbullet{
         list-style-type: "✦ ";
     }
+
+    .commission_image {
+        height: 300px;
+        width: auto;
+        padding-top: 20px;
+    }
+
+    
+
+
     </style>
 </head>
 <body>
@@ -92,12 +103,74 @@
             <input type="text" id="Insta-Username" placeholder="Your Username..." required>
         </div>
 
-        <div style="line-height:20px"><li><h2><label for="Ok-2-post">Is it ok for you if I post your commission on my Socials ?<span class="sternchen">*</span></label></h2></li>
-           
+        <div style="line-height:20px"><li><h2>Is it ok for you if I post your commission on my Socials ?<span class="sternchen">*</span></h2></li>
+           <input id="Ok-2-post-yes" type="radio" name="allow_to_share" value="1">
+           <label for="Ok-2-post-yes">Yes, I agree.</label><br>
+
+           <input id="Ok-2-post-no" type="radio"  name="allow_to_share" value="2">
+           <label for="Ok-2-post-no">No, I don't agree.</label><br>
+        </div>
+    </ol>
+
+        <div>
+            <h1>What kind of Commission do u want ?</h1>
+
+            <div>
+            <input type="checkbox" id="Kind_of_commission:Potrait">
+            <label for="Kind_of_commission:Potrait">Potrait: 5 €</label><br>
+            <img class="commission_image" src="/Users/efeaksoy/Documents/GitHub/My Website/Bilder/Potrait.jpg" >
+            </div>
+
+            <div>
+            <input type="checkbox" id="Kind_of_commission:Bust">
+            <label for="Kind_of_commission:Bust">Bust: 10 €</label><br>
+            <img class="commission_image" src="/Users/efeaksoy/Documents/GitHub/My Website/Bilder/Bust.jpg" >
+            </div>
+
+            <div>
+            <input type="checkbox" id="Kind_of_commission:Tight-up">
+            <label for="Kind_of_commission:Tight-up"> Tight up: 20 €</label><br>
+            <img class="commission_image" src="/Users/efeaksoy/Documents/GitHub/My Website/Bilder/Tight up.jpg" >
+            </div>
+
+            <div>
+            <input type="checkbox" id="Kind_of_commission:Full-body">
+            <label for="Kind_of_commission:Full-body"> Full-body: 25 €</label><br>
+            <img class="commission_image" src="/Users/efeaksoy/Documents/GitHub/My Website/Bilder/Full body.jpg" >
+            </div>
         </div>
 
+        <div>
+            <h1>Coloring technique</h1>
 
-    </ol>
+            <div>
+            <input type="checkbox" id="Coloring:Opt1">
+            <label for="Coloring:Opt1"> Clean lineart + flat coloring: 7€</label><br>
+            <img class="commission_image" src='/Users/efeaksoy/Documents/GitHub/My Website/Bilder/Flat.jpg' >
+            </div>
+
+            <div>
+            <input type="checkbox" id="Coloring:Opt2">
+            <label for="Coloring:Opt2"> My coloring(detailed): 15€</label><br>
+            <img class="commission_image" src='/Users/efeaksoy/Documents/GitHub/My Website/Bilder/My Coloring.jpg' >
+            </div>
+
+            <div>
+            <input type="checkbox" id="Coloring:Opt3">
+            <label for="Coloring:Opt3"> Water color: 5€</label><br>
+            <img class="commission_image" src='/Users/efeaksoy/Documents/GitHub/My Website/Bilder/Watercolor.jpg' >
+            </div>
+
+            <div>
+            <input type="checkbox" id="Coloring:Opt4">
+            <label for="Coloring:Opt4"> (Rainbow-)Sketch: 3€</label><br>
+            <img class="commission_image" src='/Users/efeaksoy/Documents/GitHub/My Website/Bilder/(Rainbow-)Sketch.jpg' >
+            </div>
+            
+
+
+        </div>
+    
     </form>
 
 
