@@ -31,14 +31,18 @@
     .commission_image {
         height: 300px;
         width: auto;
-        padding-top: 20px;
+        border: 2px solid #555;
+    }
+    textarea{
+        width: 100%;
+        font-family: "Menlo";
     }
 
     
-
-
     </style>
 </head>
+
+
 <body>
     <h1>What am I drawing ?</h1>
 
@@ -82,35 +86,44 @@
     </ul>
 
     <form>
-        <h1>I read and agree the terms ?</h1>
-        <input type="checkbox" id="Terms" required>
-        <label id="Terms">Yes, I have read the terms and I agree<span class="sternchen">*</span></label>
+    <h1>I read and agree the terms?</h1>
+    <input type="checkbox" id="Terms" name="agreed_to_terms" required>
+    <label for="Terms">Yes, I have read the terms and I agree<span class="sternchen">*</span></label>
     
-    <form>
-    <div style="line-height: 7px"><h1>Commission Application</h1>
-    <p style="font-size: 11px">Please fill the gaps and tick the Options</p></div>
+    <div style="margin-top: 40px; margin-bottom: 20px;">
+        <h1 style="margin-bottom: 0;">Commission Application</h1>
+        <p style="font-size: 11px; margin-top: 0;">Please fill the gaps and tick the Options</p>
+    </div>
     
-    <ol>
-        <div style="line-height:20px"><li><h2><label for="Your-name">Your name<span class="sternchen">*</span></h2></label></li>
-            <input type="text" id="Your-name" placeholder="Your name..." required>
-        </div>
+    <div style="margin-bottom: 20px;">
+        <label for="Your-name" style="font-weight: bold; font-size: 18px;">Your name<span class="sternchen">*</span></label><br>
+        <input type="text" id="Your-name" name="customer_name" placeholder="Your name..." required>
+    </div>
 
-        <div style="line-height:20px"><li><h2><label for="E-Mail">E-Mail<span class="sternchen">*</span></label></h2></li>
-            <input type="text" id="E-Mail" placeholder="Your E-Mail..." required>
-        </div>
+    <div style="margin-bottom: 20px;">
+        <label for="E-Mail" style="font-weight: bold; font-size: 18px;">E-Mail<span class="sternchen">*</span></label><br>
+        <input type="email" id="E-Mail" name="customer_email" placeholder="Your E-Mail..." required>
+    </div>
 
-        <div style="line-height:20px"><li><h2><label for="Insta-Username">Your Insta Username<span class="sternchen">*</span></label></h2></li>
-            <input type="text" id="Insta-Username" placeholder="Your Username..." required>
-        </div>
+    <div style="margin-bottom: 20px;">
+        <label for="Insta-Username" style="font-weight: bold; font-size: 18px;">Your Insta Username<span class="sternchen">*</span></label><br>
+        <input type="text" id="Insta-Username" name="customer_insta" placeholder="Your Username..." required>
+    </div>
 
-        <div style="line-height:20px"><li><h2>Is it ok for you if I post your commission on my Socials ?<span class="sternchen">*</span></h2></li>
-           <input id="Ok-2-post-yes" type="radio" name="allow_to_share" value="1">
-           <label for="Ok-2-post-yes">Yes, I agree.</label><br>
+    <div style="margin-bottom: 40px;">
+        <p style="font-weight: bold; font-size: 18px; margin-bottom: 5px;">Is it ok for you if I post your commission on my Socials?<span class="sternchen">*</span></p>
+        <input id="Ok-2-post-yes" type="radio" name="allow_to_share" value="yes" required>
+        <label for="Ok-2-post-yes">Yes, I agree.</label><br>
 
-           <input id="Ok-2-post-no" type="radio"  name="allow_to_share" value="2">
-           <label for="Ok-2-post-no">No, I don't agree.</label><br>
-        </div>
-    </ol>
+        <input id="Ok-2-post-no" type="radio" name="allow_to_share" value="no">
+        <label for="Ok-2-post-no">No, I don't agree.</label><br>
+    </div>
+
+    <div style="margin-top: 40px;">
+        <button type="submit" style="padding: 10px 20px; font-size: 18px; cursor: pointer;">Send Commission Request!</button>
+    </div>
+
+    </form>
 
         <div>
             <h1>What kind of Commission do u want ?</h1>
@@ -136,7 +149,7 @@
             <div>
             <input type="checkbox" id="Kind_of_commission:Full-body">
             <label for="Kind_of_commission:Full-body"> Full-body: 25 €</label><br>
-            <img class="commission_image" src="/Users/efeaksoy/Documents/GitHub/My Website/Bilder/Full body.jpg" >
+            <img class="commission_image" src="/Users/efeaksoy/Documents/GitHub/My Website/Bilder/Full body.jpg" > 
             </div>
         </div>
 
@@ -164,17 +177,115 @@
             <div>
             <input type="checkbox" id="Coloring:Opt4">
             <label for="Coloring:Opt4"> (Rainbow-)Sketch: 3€</label><br>
-            <img class="commission_image" src='/Users/efeaksoy/Documents/GitHub/My Website/Bilder/(Rainbow-)Sketch.jpg' >
+            <img class="commission_image" src='/Users/efeaksoy/Documents/GitHub/My Website/Bilder/(Rainbow-)Sketch.jpg' ><img class="commission_image" src="https://lh7-rt.googleusercontent.com/formsz/AN7BsVAIjc40hv8hg7gVMPKa8dJ-2CXBoRoJin1ybUXRYJ45iVqohKAa2GGC9m8Z4bs3sRSqh7WH8FeHjMmRi4SXVJmDV7R3AjVdBG_XSFIZqFAtNoSTO6UBIEMNzxJg3HCSH-Xhfq4W0e9oQZOUXYEVJYYTymxo2_zCd1EVGw?key=Ms-BfbKqM_pVJie_l_HM8g">
             </div>
+        </div>
             
+        <div>
+        <h1>Background Options</h1>
+            <div>
+            <input type="checkbox" id="background:Opt1">
+            <label for="background:Opt1"> Plain Background: 0€</label><br>
+            <img class="commission_image" src='/Users/efeaksoy/Documents/GitHub/My Website/Bilder/Plain background.jpg' >
+            </div>
+
+            <div>
+            <input type="checkbox" id="background:Opt2">
+            <label for="background:Opt2"> Watercolor background: 2€</label><br>
+            <img class="commission_image" src='/Users/efeaksoy/Documents/GitHub/My Website/Bilder/Watercolor-ish background.jpg' >
+            </div>
+
+            <div>
+            <input type="checkbox" id="background:Opt3">
+            <label for="background:Opt3"> Collage background: 2€</label><br>
+            <img class="commission_image" src='/Users/efeaksoy/Documents/GitHub/My Website/Bilder/Collage Background.jpg' >
+            </div>
+
+            <div>
+            <input type="checkbox" id="background:Opt4">
+            <label for="background:Opt4"> Detailed background: 10€</label><br>
+            <img class="commission_image" src='/Users/efeaksoy/Documents/GitHub/My Website/Bilder/Detailed background.jpg' >
+            </div>
+        </div> 
+
+
+        <div>
+            <h2>Examples</h1>
+            
+                <div>
+                    Example for my outfit design<br>
+                    <img class="commission_image" src="https://lh7-rt.googleusercontent.com/formsz/AN7BsVDAlgBpu1bV42JwWEaq1WMQW5Ec4wMd7qI9WryEDV0vI3Rrp3VCWJKcSBp81R551WHDi78jyXPwkzFNH_rELJAfeSuyzIlJEYfcnL1WdfR67Jb_PzYhOeAau2tbPifX3vTmVKHjqQnPsfUUwy-6srEwc66bC4KEbpTOoQ?key=Ms-BfbKqM_pVJie_l_HM8g">
+                </div>
+
+                <div>
+                    I also draw children <br>
+                    <img class="commission_image" src="https://lh7-rt.googleusercontent.com/formsz/AN7BsVBWCQnG4aZ3j60VHE3fyP5Jd4DxFQqiUjmzPRVxlspkOw1kuVjBHIsWPBuWxUnRotPHX5nNTv4hUXCGb0kH7vB9JRmmaPsFzT2oyHQfUOim5ElXnRW9k3ixLsw3Wty4t48d6Ihc3VazxRYUAZr1A9MupyEH3EnI-n1NXg?key=Ms-BfbKqM_pVJie_l_HM8g">
+                </div>
+
+                <div>
+                    <u>How many extra Charakters do you want to add?</u> <br>
+                    <p style="font-size: 10px">Each extra Character is +75%-100%</p>
+                    <img class="commission_image" src="https://lh7-rt.googleusercontent.com/formsz/AN7BsVDg8s9Q0P1pGemI8FKgJd1POV19wyw3FguMzkP-vBdXhgO-WWrp0PqLvWHerjz14fudZ5y5bx5oO4Gwe0Pcx2eCuBFMpnq-ndNcsK7BW1W9OfsSNOwArU27tB9YQzJWvI_GXR03uejvThJmcWKJd1QfCxZ48JLFAGzr8g?key=Ms-BfbKqM_pVJie_l_HM8g"><br>
+                    <input style="height: fit-content; width: 30px" type="Number" placeholder="0" min="0" max="5" required><br><br>
+                </div>
+
+                <div>
+                    I also draw animals <br>
+                    <img class="commission_image" src="https://lh7-rt.googleusercontent.com/formsz/AN7BsVCtzPOPLBgf5vOglJfBhtnuMEdmT3wRTv1S_2dVNeV5l3TYw2_DAcViB7cDeNgGuiMvQZdrjZsdv7wX73HS_zp9iCBwQ7WgNguj3d688szsy_IB37Uy65wrUEwqEQV1JDaX7UgaCG3QwQTTAPZO-9CjFDDrQW460ym84A?key=Ms-BfbKqM_pVJie_l_HM8g">
+                </div>
+        </div>
+<hr>
+        <div>
+
+            <div>
+            <h1>Please give me more specific info about your commission</h1>
+                <textarea placeholder="Please type here... "
+                    rows="5"
+                    maxlength="300"
+                ></textarea>
+            </div>
+
+            <div>
+            <h1>Is there anything I need to know about your commission ?</h1>
+            <textarea placeholder="Please type here... "
+                rows="5"
+                maxlength="300"
+            ></textarea>
+            </div>
+
+            <div>
+                <h1>Is there a deadline ?</h1>
+                <input type="date">
+            </div>
+
+            <hr>
+
+            <div style="margin-bottom: 20px;">
+                <label for="charakterBilder" style="font-weight: bold; font-size: 18px;">
+                    <h1>Reference Images (min. 3 Pictures)</h1>
+                </label>
+                <p style="font-size: 12px; margin-top: 0; margin-bottom: 5px;">Allowed: .jpg, .jpeg, .png</p>
+                
+                <input 
+                    type="file" 
+                    id="charakterBilder" 
+                    name="reference_images" 
+                    accept=".jpg, .jpeg, .png" 
+                    multiple 
+                    onchange="checkBildAnzahl(this)"
+                >
+                
+                <p>What is your character doing ? What is their facial expression ? Is there a certain pose you want them to be in ? Give me as much example as u can !!!</p>
+            </div>
 
 
         </div>
+        
     
     </form>
 
 
 
-</form>
+    </form>
 </body>
 </html>
