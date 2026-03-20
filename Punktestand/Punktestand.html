@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punktefeld Pro</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="punktestand.css">
+</head>
+<body>
+
+
+
+
+<div class="input-bereich">
+    <div class="input-group">
+        <label for="input-t1">NAME 1</label>
+        <input id="input-t1" class="nameneintrag" placeholder="Team 1...">
+    </div>
+    <div class="input-group">
+        <label for="input-t2">NAME 2</label>
+        <input id="input-t2" class="nameneintrag" placeholder="Team 2...">
+    </div>
+</div>
+
+<div class="scoreboard">
+    <div class="team-container">
+        <span id="T1-name" class="scoreboard_name">TEAM 1</span>
+        <p class="score" id="score1">0</p>
+        <div class="button-reihe">
+            <button id="Team1+1" class="scorebutton">+</button>
+            <button id="Team1-1" class="scorebutton">-</button>
+        </div>
+    </div>
+
+    <div class="doppelpunkt">:</div>
+
+    <div class="team-container">
+        <span id="T2-name" class="scoreboard_name">TEAM 2</span>
+        <p class="score" id="score2">0</p>
+        <div class="button-reihe">
+            <button id="Team2+1" class="scorebutton">+</button>
+            <button id="Team2-1" class="scorebutton">-</button>
+        </div>
+    </div>
+    
+    <button id="reset-btn" class="resetbutton">RESET</button>
+</div>
+
+<script src="Punktestand.js"></script>
+</body>
+</html>
+
